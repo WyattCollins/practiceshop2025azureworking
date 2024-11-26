@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*colors
+color
+color
+color
+*/
+html {
+    box-sizing: border=border-box;
+
+}
+
+ * {
+    box-sizing: inherit;
+ }
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: left;
+    color:rgb(34, 32, 29));
+    background-color: #FFF8e9;
+    max-width: 1200px;
+}
+
+h2 {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: rgb(121, 75, 24);
+}
+dt {
+    font-weight: bold;
+    color: darkgray 
+
+}
+h1 {
+    font: bold 2.2em Times, serif;
+    color: rgb(157, 91, 31);
+    
+}
+/*NAV STYLE*/
+.main_nav {
+    display: flex;
+    align-items:  center;
+    list-style: none;
+    background-color: rgb(57, 79, 94);
+    padding: .3em;
+    margin: 0;
+}
+
+.main_nav a {
+    color:white;
+    padding: 60px 40px;
+    text-decoration: none;
+}
+
+.main_nav a:hover {
+    background-color: white;
+    color:rgb(57, 79, 94)
+}
+
+li.logo {
+    margin-right: auto;
+}
+
+
+
+
+
+
+/*MENU STYLES*/
+.price {
+    font-weight: bold;
+    font-style: italic;
+}
+
+strong {
+    font-style: italic
+}
+
+#drinks {
+    border: 1.75px solid;
+    background-color: rgba(50, 60, 100, 25);
+}
+#treats {
+    border:2px solid;
+    background-color: rgba(50, 60, 100, 25);
+}
+#header {
+    color: rgb(66, 61, 54);
+}
+ /*---------------------------------HERO IMAGE---------------------------------*/
+ /*---------Index Hero-------*/
+
+ .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4) ),url(images/coffee_beans.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+ }
+ .hero_header {
+    color:azure;
+    margin: 0;
+ }
+/*---------Button-------*/
+ .button {
+    background-color: rgb(57, 79, 94);
+    border:none;
+    color: white;
+    display: inline;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+ }
+
+ /*---------IMAGES-------*/
+
+ img {
+    max-width: 100%;
+ }
+
+
+ /*-----------------GRID_INDEX--------------*/
+
+ #index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        'welcome welcome welcome'
+        'shop shop shop'
+        'fact1 fact2 fact3'
+        'about about about'
+        'product1 product2 product3'
+        'review review review';
+    gap: 20px; 
+    justify-content: center;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+    #welcome {
+        grid-area: welcome;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #shop {
+        grid-area: shop;
+        object-fit: cover;
+        
+    }
+    #about {
+        grid-area: about;
+        object-fit: cover;
+        text-align: center;
+    }
+    
+    #fact1 {
+        grid-area: fact1;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #fact2 {
+        grid-area: fact2;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #fact3 {
+        grid-area: fact3;
+        object-fit: cover;
+        text-align: center;
+    }
+    
+    #product1 {
+        grid-area: product1;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #product2 {
+        grid-area: product2;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #product3 {
+        grid-area: product3;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    #review {
+        grid-area: review;
+        object-fit: cover;
+        margin: 10px;
+        text-align: center;
+    }
+
+    /*responsive tablet sized screen*/
+
+    @media (max-width: 1024px) {
+        #index_grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                'welcome welcome'
+                'shop shop'
+                'fact1 fact2'
+                'fact3 about'
+                'product1 product2'
+                'product3 review';
+        }
+    }
+
+    /*responsive tablet sized screen*/
+
+    @media (max-width: 768px) {
+        #index_grid {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                'welcome'
+                'shop'
+                'fact1'
+                'fact2'
+                'fact3'
+                'about'
+                'product1'
+                'product2'
+                'product3'
+                'review';
+        }
+    }
